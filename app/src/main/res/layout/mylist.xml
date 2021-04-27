@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <data class="MyListBinding">
+        <variable
+            name="mylistmodel"
+            type="com.example.ithinktask.MyListViewModel" />
+
+    </data>
+
+<androidx.cardview.widget.CardView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    
+    app:cardCornerRadius="8dp"
+  android:layout_margin="5dp">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+    <ImageView
+        android:background="@drawable/border_color"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        app:imageUrl="@{mylistmodel.avatar_url}"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center">
+        <TextView
+            android:layout_marginTop="10dp"
+            android:textSize="16sp"
+            android:gravity="center"
+            android:text="@{mylistmodel.name}"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"/>
+        <TextView
+            android:layout_marginTop="10dp"
+            android:textSize="16sp"
+            android:gravity="center"
+            android:text="@{mylistmodel.desc}"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="italic"/>
+    </LinearLayout>
+
+</LinearLayout>
+</androidx.cardview.widget.CardView>
+</layout>
